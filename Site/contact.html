@@ -32,28 +32,22 @@
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-
-        // Validera e-postadressen
         if (!isValidEmail(emailInput.value)) {
           alert("Ange en giltig e-postadress.");
           return;
         }
 
-        // Validera lösenordet
         if (lösenInput.value.trim() === "") {
           alert("Ange ett lösenord.");
           return;
         }
 
-        // Skicka e-posten
         sendEmail(emailInput.value, lösenInput.value);
 
-        // Nollställ formuläret
         form.reset();
       });
 
       function isValidEmail(email) {
-        // Enkel validering av e-postadressen
         const emailRegex = /^\S+@\S+\.\S+$/;
         return emailRegex.test(email);
       }
