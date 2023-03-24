@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contact.css    " />
+    <title>contact</title>
+  </head>
+  <body>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="email">E-postadress:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="lösen">Lösenord:</label>
+        <input type="text" id="lösen" name="lösen" required />
+      </div>
+
+      <button type="submit" id="submit-btn">Logga in</button>
+      <div>
+        <p>Har inte ett konto?</p>
+        <p>Skapa konto</p>
+      </div>
+    </form>
+    <script>
+      const form = document.querySelector("#contact-form");
+      const emailInput = document.querySelector("#email");
+      const lösenInput = document.querySelector("#lösen");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Validera e-postadressen
+        if (!isValidEmail(emailInput.value)) {
+          alert("Ange en giltig e-postadress.");
+          return;
+        }
+
+        // Validera lösenordet
+        if (lösenInput.value.trim() === "") {
+          alert("Ange ett lösenord.");
+          return;
+        }
+
+        // Skicka e-posten
+        sendEmail(emailInput.value, lösenInput.value);
+
+        // Nollställ formuläret
+        form.reset();
+      });
+
+      function isValidEmail(email) {
+        // Enkel validering av e-postadressen
+        const emailRegex = /^\S+@\S+\.\S+$/;
+        return emailRegex.test(email);
+      }
+
+      function sendEmail(email, lösen) {
+        console.log(`Skickar e-post till ${email} med lösenordet "${lösen}".`);
+      }
+    </script>
+  </body>
+</html>

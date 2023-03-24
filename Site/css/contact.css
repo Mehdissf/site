@@ -1,0 +1,54 @@
+/* Centera boxen i mitten av sidan */
+body {
+  background-color: #22171d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Styla formulär */
+#contact-form {
+  max-width: 500px;
+  padding: 30px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Styla etiketter */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Styla inmatningsfält */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Styla skicka-knappen */
+#submit-btn {
+  background-color: #22171d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: #664759;
+}
+
+/* Styla felmeddelanden */
+.error {
+  color: #7a2727;
+  margin-top: 5px;
+}
