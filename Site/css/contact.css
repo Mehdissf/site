@@ -1,10 +1,6 @@
 /* Centera boxen i mitten av sidan */
-body {
+#contact {
   background-color: #22171d;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
 /* Styla formulär */
@@ -14,6 +10,7 @@ body {
   background-color: #f7f7f7;
   border-radius: 10px;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
 }
 
 /* Styla etiketter */

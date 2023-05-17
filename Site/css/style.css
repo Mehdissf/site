@@ -113,7 +113,75 @@ ul:first-child {
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 912px) {
+.your-legacy {
+  width: 100vw;
+  height: 500px;
+  background-color: #22171d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.introduction {
+  margin-top: 50px;
+  font-size: 26px;
+}
+.legacy-text {
+  font-size: 48px;
+}
+.legacy {
+  /* position: absolute; */
+  margin-top: 30px;
+}
+article {
+  height: 1600px;
+  width: 100vw;
+  background-color: #22171d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: rgb(225, 190, 123);
+  text-align: center;
+}
+h4 {
+  margin-top: 2cm;
+}
+.imgg {
+  display: block;
+  margin-top: 1cm;
+  padding-top: 0.5cm;
+}
+.första-delen-av-artikeln {
+  margin-bottom: 2cm;
+}
+
+@media (max-width: 821px) {
+  #ikon {
+    font-size: 38px;
+    padding-right: 25px;
+  }
+  #varukorg {
+    font-size: 35px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 820px) {
+  .ck3bild {
+    width: 150px;
+    height: 150px;
+  }
+  .imgg {
+    width: 350px;
+    height: auto;
+    margin: auto;
+  }
+  .mycket-text {
+    font-size: 12px;
+    width: 350px;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+  }
   #inte-hamburgar-meny li:not(:first-child) {
     display: none;
   }
@@ -129,7 +197,6 @@ ul:first-child {
     top: 0;
     color: white;
     text-decoration: none;
-    font-size: 28px;
     padding-right: 15px;
   }
   #menu {
@@ -154,12 +221,22 @@ ul:first-child {
     text-decoration: none;
     font-weight: bold;
   }
-  .ck3bild {
-    width: 150px;
-    height: 150px;
-  }
   .footer {
     display: flex;
     width: 100%;
+  }
+  .your-legacy {
+    height: 300px;
+  }
+  .introduction {
+    margin-top: 30px;
+    font-size: 20px;
+  }
+  .legacy-text {
+    font-size: 40px;
+  }
+  .legacy {
+    width: 70vw;
+    height: 120px;
   }
 }
