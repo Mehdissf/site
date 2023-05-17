@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/b14e94de50.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .menu-icon {
+        display: none;
+        font-size: 28px;
+        cursor: pointer;
+      }
+
+      .menu {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu li {
+        margin-right: 20px;
+      }
+
+      .menu a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .links {
+        display: none;
+        margin-top: 10px;
+      }
+
+      .links ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .links li {
+        margin-bottom: 10px;
+      }
+
+      .links a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      @media (max-width: 768px) {
+        .menu {
+          display: none;
+        }
+        .menu-icon {
+          display: block;
+        }
+        .menu-icon i {
+          margin-top: 5px;
+        }
+        .links {
+          display: block;
+        }
+      }
+    </style>
+    <header>
+      <nav>
+        <div class="menu-icon">
+          <i class="fa fa-bars"></i>
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const menu = document.querySelector(".menu");
+      const links = document.querySelector(".links");
+
+      menuIcon.addEventListener("click", () => {
+        menu.classList.toggle("show");
+        links.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

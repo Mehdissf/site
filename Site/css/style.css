@@ -1,12 +1,22 @@
 * {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-
+#ck3-logo {
+  width: 130px;
+  height: 50px;
+  margin: 10px;
+  padding: 0;
+}
+header {
+  height: 70px;
+}
 nav {
   background-color: #22171d;
   height: 70px;
   display: flex;
+  overflow-y: hidden;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -32,19 +42,124 @@ li {
   position: relative;
 }
 
-.länk:hover::after {
-  transition: all 300ms ease-in-out;
+.länk::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: white;
-  top: 50%;
-  transform: translate(0, -50%);
-  right: -5px;
+  transition: width 0.2s ease-in-out;
+}
+
+.länk:hover::before {
+  width: 100%;
 }
 
 ul:first-child {
   margin-right: auto;
+}
+/* Köp nu */
+.köpnu {
+  padding: 10px 20px 10px 20px;
+  background-color: rgba(225, 190, 123, 0.5);
+  border: #e1be7b solid 1px;
+  text-decoration: none;
+  color: white;
+  margin-right: 40px;
+  border-radius: 2px;
+}
+.köpnu:hover {
+  background-color: rgb(230, 201, 148);
+  color: rgb(12, 12, 12);
+  transition: 200ms all;
+}
+#menu {
+  display: none;
+}
+#ikon {
+  display: none;
+}
+
+/* varukorgen */
+#varukorg {
+  padding: auto;
+  margin-right: 30px;
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+}
+.fa-regular .fa {
+  font-weight: none;
+}
+
+/* Hero bild */
+.bild {
+  width: 100%;
+  display: block;
+}
+.bildcontainer {
+  position: relative;
+}
+.ck3bild {
+  display: block;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 912px) {
+  #inte-hamburgar-meny li:not(:first-child) {
+    display: none;
+  }
+  .köpnu {
+    display: none;
+  }
+  #varukorg {
+    margin-right: 20px;
+  }
+  #ikon {
+    display: block;
+    right: 0;
+    top: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    padding-right: 15px;
+  }
+  #menu {
+    border-top: gray solid 0.5px;
+    background-color: #22171d;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    left: 0;
+    top: 70px;
+  }
+  #menu li {
+    display: block;
+    text-align: left;
+  }
+  #menu li a {
+    border-bottom: gray solid 0.5px;
+    display: block;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .ck3bild {
+    width: 150px;
+    height: 150px;
+  }
+  .footer {
+    display: flex;
+    width: 100%;
+  }
 }

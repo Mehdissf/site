@@ -22,39 +22,9 @@
       <button type="submit" id="submit-btn">Logga in</button>
       <div>
         <p>Har inte ett konto?</p>
-        <p>Skapa konto</p>
+        <a href="#">Skapa konto</a>
       </div>
     </form>
-    <script>
-      const form = document.querySelector("#contact-form");
-      const emailInput = document.querySelector("#email");
-      const lösenInput = document.querySelector("#lösen");
-
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        if (!isValidEmail(emailInput.value)) {
-          alert("Ange en giltig e-postadress.");
-          return;
-        }
-
-        if (lösenInput.value.trim() === "") {
-          alert("Ange ett lösenord.");
-          return;
-        }
-
-        sendEmail(emailInput.value, lösenInput.value);
-
-        form.reset();
-      });
-
-      function isValidEmail(email) {
-        const emailRegex = /^\S+@\S+\.\S+$/;
-        return emailRegex.test(email);
-      }
-
-      function sendEmail(email, lösen) {
-        console.log(`Skickar e-post till ${email} med lösenordet "${lösen}".`);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>

@@ -4,25 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b14e94de50.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <link rel="icon" href="bilder/ck3logo.svg" />
+    <title>Crusader Kings III</title>
   </head>
   <body>
     <header>
       <nav>
-        <ul>
-          <a href="#" style="display: block; margin: 0; padding: 0"
-            ><img
-              src="bilder/ck3-logo.png"
-              alt=""
-              style="width: 130px; height: 50px; margin: 10px; padding: 0"
+        <ul id="inte-hamburgar-meny">
+          <a href="index.html"
+            ><img id="ck3-logo" src="bilder/ck3-logo.png" alt=""
           /></a>
           <li><a class="länk" href="#">Om oss</a></li>
           <li><a class="länk" href="#">Nyheter</a></li>
           <li><a class="länk" href="#">Add-ons</a></li>
+          <li><a class="länk" href="contact.html">Logga in</a></li>
         </ul>
+        <ul id="menu">
+          <li><a class="länkk" href="#">Om oss</a></li>
+          <li><a class="länkk" href="#">Nyheter</a></li>
+          <li><a class="länkk" href="#">Add-ons</a></li>
+          <li><a class="länkk" href="contact.html">Logga in</a></li>
+        </ul>
+        <a class="köpnu" href="köplistan.html">Köp nu</a>
+        <a id="varukorg" href="varukorgen.html">
+          <i class="fa fa-solid fa-cart-shopping"></i>
+        </a>
+        <a href="javascript:void(0);" id="ikon" onclick="minFunktion()">
+          <i class="fa-sharp fa-solid fa-bars"></i
+        ></a>
       </nav>
     </header>
+    <main>
+      <div class="hero-bild">
+        <div class="hero-innehåll">
+          <div class="bildcontainer">
+            <img class="bild" src="bilder/bakgrund.jpg" />
+            <img class="ck3bild" src="bilder/ck3.png" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <table>
+        <tr>
+          <td>
+            <h5>Om oss</h5>
+            <ul>
+              <li><a href="#">Vårt team</a></li>
+              <li><a href="#">Vår historia</a></li>
+              <li><a href="#">Vår vision</a></li>
+            </ul>
+          </td>
+          <td>
+            <h5>Kontakt</h5>
+            <ul>
+              <li><a href="#">Kundsupport</a></li>
+              <li><a href="#">Tekniks support</a></li>
+              <li><a href="#">Mejl</a></li>
+            </ul>
+          </td>
+          <td>
+            <h5>Information</h5>
+            <ul>
+              <li><a href="#">Integritetspolicy</a></li>
+              <li><a href="#">Användarvilkor</a></li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
