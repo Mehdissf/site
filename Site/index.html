@@ -10,15 +10,18 @@
     ></script>
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/koplistan.css" />
     <link rel="icon" href="bilder/ck3logo.svg" />
+
     <title>Crusader Kings III</title>
   </head>
   <body>
+    <!-- header-------->
     <header>
       <nav>
         <ul id="inte-hamburgar-meny">
           <a href="index.html"
-            ><img id="ck3-logo" src="bilder/ck3-logo.png" alt=""
+            ><img id="ck3-logo" src="bilder/ck3-logo.png" alt="logo"
           /></a>
           <li><a class="länk" href="#">Om oss</a></li>
           <li><a class="länk" href="#">Nyheter</a></li>
@@ -40,30 +43,42 @@
         ></a>
       </nav>
     </header>
+
+    <!--main----------->
     <main>
-      <div class="hero-bild">
+      <section class="hero-bild">
         <div class="hero-innehåll">
           <div class="bildcontainer">
-            <img class="bild" src="bilder/bakgrund.jpg" />
+            <img class="bild" src="bilder/bra-ck3-backgrund.jpg" />
             <img class="ck3bild" src="bilder/ck3.png" />
           </div>
         </div>
-      </div>
+      </section>
+      <section class="your-legacy">
+        <p class="introduction">Introduktion</p>
+        <h3 class="legacy-text">Ditt arv väntar</h3>
+        <img
+          class="legacy"
+          src="bilder/Screenshot 2023-05-16 090438.png"
+          alt="legacy"
+        />
+      </section>
     </main>
-    <div class="your-legacy">
-      <p class="introduction">Introduktion</p>
-      <h3 class="legacy-text">Ditt arv väntar</h3>
-      <img
-        class="legacy"
-        src="bilder/Screenshot 2023-05-16 090438.png"
-        alt=""
-      />
-    </div>
+
+    <!-- article-------->
     <article>
       <div class="första-delen-av-artikeln">
         <h4>MAIN FEATURES</h4>
-        <img class="imgg" src="bilder/1-header.png" alt="" />
-        <img class="imgg" src="bilder/ck3_feature1_logo.png" alt="" />
+        <img
+          class="imgg"
+          src="bilder/1-header.png"
+          alt="en riddare med svärd"
+        />
+        <img
+          class="imgg"
+          src="bilder/ck3_feature1_logo.png"
+          alt="A bloodline begins"
+        />
         <p class="mycket-text">
           Take command of your house and expand your dynasty through a<br />
           meticulously researched Middle Ages. Begin in 867 or 1066 and claim<br />
@@ -88,9 +103,13 @@
         <img
           class="imgg"
           src="bilder/real-strategy-requires-cunning.png"
-          alt=""
+          alt="bild-med-ett-spädbarn-i-vagga"
         />
-        <img class="imgg" src="bilder/ck3_feature3logo.png" alt="" />
+        <img
+          class="imgg"
+          src="bilder/ck3_feature3logo.png"
+          alt="en rubrik tagen från ck3 webbsidan"
+        />
         <p class="mycket-text">
           Govern an ever-evolving realm and grant titles to whom you see fit
           -<br />
@@ -111,6 +130,69 @@
         </p>
       </div>
     </article>
+    <!-- produkternaa -->
+    <main class="main">
+      <div class="produkter-container">
+        <div class="produkter">
+          <img
+            class="produkt"
+            src="bilder/Crusader_Kings-friends-foes-card.jpg"
+            alt="Freinds and Foes"
+          />
+          <div class="container">
+            <h2>Crusader Kings III: Freinds and Enemies</h2>
+            <p class="pris">499.99 SEK</p>
+            <p><button class="button">Lägg till varukorgen</button></p>
+          </div>
+        </div>
+        <div class="produkter">
+          <img class="produkt" src="bilder/fate_of_iberia_card.jpg" alt="p-2" />
+          <div class="container">
+            <h2>Crusader Kings III: Fate of Iberia</h2>
+            <p class="pris">599.99 SEK</p>
+            <p><button class="button">Lägg till varukorgen</button></p>
+          </div>
+        </div>
+        <div class="produkter">
+          <img
+            class="produkt"
+            src="bilder/Ck3-tours-tournaments-product.jpg"
+            alt="p-2"
+          />
+          <div class="container">
+            <h2>Crusader Kings III: Tours and Tournaments</h2>
+            <p class="pris">299.99 SEK</p>
+            <p><button class="button">Lägg till varukorgen</button></p>
+          </div>
+        </div>
+        <div class="produkter">
+          <img
+            class="produkt"
+            src="bilder/CKCK03ESK0000011_cardBackground.png"
+            alt="p-2"
+          />
+          <div class="container">
+            <h2>Crusader Kings III: Royal Court</h2>
+            <p class="pris">299.99 SEK</p>
+            <p><button class="button">Lägg till varukorgen</button></p>
+          </div>
+        </div>
+        <div class="produkter">
+          <img
+            class="produkt"
+            src="bilder/CKCK03DPB0000013_cardBackground (1).jpg"
+            alt="p-2"
+          />
+          <div class="container">
+            <h2>Crusader Kings III: Northern Lords</h2>
+            <p class="pris">299.99 SEK</p>
+            <p><button class="button">Lägg till varukorgen</button></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer---------->
     <footer class="footer">
       <table>
         <tr>
@@ -133,6 +215,7 @@
         </tr>
       </table>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>
