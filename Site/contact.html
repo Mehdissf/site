@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="stylesheet" href="css/contact.css    " />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+
     <script
       src="https://kit.fontawesome.com/b14e94de50.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="bilder/ck3logo.svg" />
@@ -16,7 +23,7 @@
   </head>
   <body id="contact">
     <header>
-      <nav>
+      <nav id="nav">
         <ul id="inte-hamburgar-meny">
           <a href="index.html"
             ><img id="ck3-logo" src="bilder/ck3-logo.png" alt=""
@@ -52,7 +59,7 @@
         <input type="text" id="lösen" name="lösen" required />
       </div>
 
-      <button type="submit" id="submit-btn">Logga in</button>
+      <button type="submit" id="skickain">Logga in</button>
       <div>
         <p>Har inte ett konto?</p>
         <a href="#">Skapa konto</a>
@@ -61,24 +68,46 @@
     <footer class="footer">
       <table>
         <tr>
+          <td colspan="2">
+            <img id="footer-bild" src="bilder/ck3-logo.png" alt="footer bild" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="social-media">
+              <a class="ikoner"><i class="fa-brands fa-youtube"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-twitter"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-facebook"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-spotify"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-twitch"></i></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>
             <h5>Om oss</h5>
             <ul>
-              <li><a href="#">Vårt team</a></li>
-              <li><a href="#">Vår historia</a></li>
-              <li><a href="#">Vår vision</a></li>
+              <li><a class="a-ul" href="#">Vårt team</a></li>
+              <li><a class="a-ul" href="#">Vår historia</a></li>
+              <li><a class="a-ul" href="#">Vår vision</a></li>
             </ul>
           </td>
           <td>
             <h5>Kontakt</h5>
             <ul>
-              <li><a href="#">Kundsupport</a></li>
-              <li><a href="#">Tekniks support</a></li>
-              <li><a href="#">Mejl</a></li>
+              <li><a class="a-ul" href="#">Kundsupport</a></li>
+              <li><a class="a-ul" href="#">Tekniks support</a></li>
+              <li><a class="a-ul" href="#">Mejl</a></li>
             </ul>
           </td>
         </tr>
       </table>
+      <div id="map"></div>
+
+      <p class="text-längst-i-botten">
+        © 2023 Paradox Interactive AB. All trademarks are the property of their
+        respective owners.
+      </p>
     </footer>
 
     <script src="script.js"></script>

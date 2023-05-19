@@ -1,43 +1,33 @@
-//Contact.html js-koder
-const form = document.querySelector("#contact-form");
-const emailInput = document.querySelector("#email");
-const lösenInput = document.querySelector("#lösen");
+const nav = document.getElementById("nav");
+const modeToggleBtn = document.getElementById("mode-toggle");
 
-form.addEventListener("submit", (e) => {
-  e.förhindra();
-  if (!giltigtEmail(emailInput.value)) {
-    alert("Ange en giltig e-postadress.");
-    return;
-  }
-
-  if (lösenInput.value.trim() === "") {
-    alert("Ange ett lösenord.");
-    return;
-  }
-
-  skickaEmail(emailInput.value, lösenInput.value);
-
-  form.reset();
+modeToggleBtn.addEventListener("click", function () {
+  nav.classList.toggle("dark-mode");
 });
 
-function giltigtEmail(email) {
-  const emailRegex = /^\S+@\S+\.\S+$/;
-  return emailRegex.test(email);
-}
-
-function skickaEmail(email, lösen) {
-  console.log(`Skickar e-post till ${email} med lösenordet "${lösen}".`);
-}
-
-function minFunktion() {
-  var x = document.getElementById("menu");
+function togglemeny() {
+  var menu = document.getElementById("menu");
   var icon = document.getElementById("ikon");
 
-  if (x.style.display === "block") {
+  if (menu.style.display === "block") {
     icon.innerHTML = '<i class="fa fa-bars"></i>';
-    x.style.display = "none";
+    menu.style.display = "none";
   } else {
-    x.style.display = "block";
+    menu.style.display = "block";
     icon.innerHTML = '<i class="fa fa-times"></i>';
   }
 }
+
+mapboxgl.accessToken =
+  "pk.eyJ1IjoibGFuenp6eiIsImEiOiJjbGh2Mnp1a2owNGs0M3JtZHY1dmJsNmgxIn0.WK-bsq9ibjlRVXi64j2usA";
+
+var map = new mapboxgl.Map({
+  container: "map",
+  style: "mapbox://styles/mapbox/streets-v11",
+  center: [18.06300275, 59.43986375],
+  zoom: 12,
+});
+
+var marker = new mapboxgl.Marker()
+  .setLngLat([18.06300275, 59.43986375])
+  .addTo(map);

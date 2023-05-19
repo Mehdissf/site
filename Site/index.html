@@ -33,12 +33,13 @@
           <li><a class="länkk" href="#">Nyheter</a></li>
           <li><a class="länkk" href="#">Add-ons</a></li>
           <li><a class="länkk" href="contact.html">Logga in</a></li>
+          <button id="mode-toggle">Växla läge</button>
         </ul>
         <a class="köpnu" href="köplistan.html">Köp nu</a>
         <a id="varukorg" href="varukorgen.html">
           <i class="fa fa-solid fa-cart-shopping"></i>
         </a>
-        <a href="javascript:void(0);" id="ikon" onclick="minFunktion()">
+        <a href="javascript:void(0);" id="ikon" onclick="togglemeny()">
           <i class="fa-sharp fa-solid fa-bars"></i
         ></a>
       </nav>
@@ -131,7 +132,7 @@
       </div>
     </article>
     <!-- produkternaa -->
-    <main class="main">
+    <div class="main">
       <div class="produkter-container">
         <div class="produkter">
           <img
@@ -190,27 +191,71 @@
           </div>
         </div>
       </div>
-    </main>
+    </div>
 
     <!-- footer---------->
     <footer class="footer">
       <table>
         <tr>
+          <td colspan="2">
+            <img id="footer-bild" src="bilder/ck3-logo.png" alt="footer bild" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <div class="social-media">
+              <a class="ikoner"><i class="fa-brands fa-youtube"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-twitter"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-facebook"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-spotify"></i></a>
+              <a class="ikoner"><i class="fa-brands fa-twitch"></i></a>
+            </div>
+          </td>
+        </tr>
+        <tr>
           <td>
             <h5>Om oss</h5>
             <ul>
-              <li><a href="#">Vårt team</a></li>
-              <li><a href="#">Vår historia</a></li>
-              <li><a href="#">Vår vision</a></li>
+              <li><a class="a-ul" href="#">Vårt team</a></li>
+              <li><a class="a-ul" href="#">Vår historia</a></li>
+              <li><a class="a-ul" href="#">Vår vision</a></li>
             </ul>
           </td>
           <td>
             <h5>Kontakt</h5>
             <ul>
-              <li><a href="#">Kundsupport</a></li>
-              <li><a href="#">Tekniks support</a></li>
-              <li><a href="#">Mejl</a></li>
+              <li><a class="a-ul" href="#">Kundsupport</a></li>
+              <li><a class="a-ul" href="#">Tekniks support</a></li>
+              <li><a class="a-ul" href="#">Mejl</a></li>
             </ul>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <form class="fälttext" action="/din-måladress">
+              <label for="meddelande">Meddelande:</label>
+              <div class="input-container">
+                <input
+                  class="meddelande"
+                  type="text"
+                  id="meddelande"
+                  name="meddelande"
+                  required
+                />
+              </div>
+              <div class="input-container">
+                <label for="email">Din e-postadress:</label>
+                <input
+                  class="e-mail"
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <br /><br />
+              <input type="submit" value="Skicka" />
+            </form>
           </td>
         </tr>
       </table>

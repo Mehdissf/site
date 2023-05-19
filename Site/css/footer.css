@@ -1,3 +1,110 @@
-td{
-    
+table {
+  display: flex;
+}
+tr {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+footer {
+  height: 1000px;
+  width: 100vw;
+  background-color: #101010;
+}
+h5 {
+  color: rgb(171, 171, 171);
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.a-ul {
+  list-style-type: none;
+  text-decoration: none;
+  color: gray;
+}
+.a-ul:hover {
+  color: white;
+  transition: all 200ms;
+}
+#footer-bild {
+  width: 200px;
+  height: 80px;
+  display: block;
+  margin-left: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.text-längst-i-botten {
+  color: rgb(151, 151, 151);
+  margin-left: 30px;
+  margin-top: 80px;
+}
+.social-media {
+  margin-left: 30px;
+}
+.ikoner {
+  font-size: 26px;
+  margin-right: 10px;
+  color: gray;
+}
+.ikoner:hover {
+  cursor: pointer;
+  color: white;
+  transition: all 200ms;
+}
+.fälttext {
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 2px;
+  width: 300px;
+  margin-left: 10px;
+  margin-top: 20px;
+  color: gray;
+}
+#map {
+  width: 100%;
+  height: 200px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.meddelande {
+  height: 100px;
+}
+.e-mail {
+  height: 30px;
+}
+
+@media (max-width: 820px) {
+  table {
+    flex-direction: column;
+  }
+
+  tr {
+    margin-left: 0;
+  }
+
+  #footer-bild,
+  .social-media,
+  td {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .text-längst-i-botten {
+    display: none;
+  }
+  .fälttext {
+    width: 200px;
+    margin-left: 10px;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meddelande {
+    height: 100px;
+  }
 }
